@@ -9,9 +9,11 @@ app.use(express.json());
 
 const authRoutes = require('./routes/auth');
 const sessionRoutes = require('./routes/session');
+const studentRoutes = require('./routes/student'); // ADD THIS
 
 app.use('/api/auth', authRoutes);
 app.use('/api/session', sessionRoutes);
+app.use('/api/student', studentRoutes); // ADD THIS
 
 app.get('/test', (req, res) => {
   res.json({ message: '✅ Backend is running!' });

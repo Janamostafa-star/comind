@@ -1,7 +1,7 @@
-// This is like a blueprint for what a user looks like
-
-const users = []; // Temporary storage
-const sessions = []; // Track active sessions
+// User storage
+const users = [];
+const sessions = [];
+const studentStats = []; // New: Track student statistics
 
 class User {
   constructor(id, name, email, password, role) {
@@ -9,22 +9,21 @@ class User {
     this.name = name;
     this.email = email;
     this.password = password;
-    this.role = role; // 'student' or 'host'
+    this.role = role;
     this.createdAt = new Date();
     this.lastLogin = null;
+    this.profilePicture = null;
+    this.bio = null;
   }
 
-  // Find user by email
   static findByEmail(email) {
     return users.find(u => u.email === email);
   }
 
-  // Find user by ID
   static findById(id) {
     return users.find(u => u.id === id);
   }
 
-  // Create new user
   static create(userData) {
     const user = new User(
       Date.now().toString(),
@@ -34,10 +33,15 @@ class User {
       userData.role || 'student'
     );
     users.push(user);
+    
+    // Initialize student stats if student
+    if (user.role === 'student') {
+      StudentStats.create(user.id);
+    }
+    
     return user;
   }
 
-  // Update last login time
   static updateLastLogin(userId) {
     const user = users.find(u => u.id === userId);
     if (user) {
@@ -46,9 +50,22 @@ class User {
     return user;
   }
 
-  // Get all users
+  static updateProfile(userId, updates) {
+    const user = users.find(u => u.id === userId);
+    if (user) {
+      if (updates.name) user.name = updates.name;
+      if (updates.bio) user.bio = updates.bio;
+      if (updates.profilePicture) user.profilePicture = updates.profilePicture;
+    }
+    return user;
+  }
+
   static getAll() {
     return users;
+  }
+
+  static getAllStudents() {
+    return users.filter(u => u.role === 'student');
   }
 }
 
@@ -59,7 +76,7 @@ class Session {
       userId,
       token,
       createdAt: new Date(),
-      expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000) // 24 hours
+      expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000)
     };
     sessions.push(session);
     return session;
@@ -78,7 +95,6 @@ class Session {
     return false;
   }
 
-  // Clean up expired sessions
   static cleanExpired() {
     const now = new Date();
     const validSessions = sessions.filter(s => s.expiresAt > now);
@@ -87,4 +103,55 @@ class Session {
   }
 }
 
-module.exports = { User, Session };
+// Student Statistics
+class StudentStats {
+  static create(studentId) {
+    const stats = {
+      studentId,
+      totalStudyTime: 0, // in minutes
+      meetingsJoined: 0,
+      questionsAsked: 0,
+      quizzesTaken: 0,
+      averageQuizScore: 0,
+      focusScore: 0, // 0-100
+      lastActive: new Date(),
+      createdAt: new Date()
+    };
+    studentStats.push(stats);
+    return stats;
+  }
+
+  static findByStudentId(studentId) {
+    return studentStats.find(s => s.studentId === studentId);
+  }
+
+  static updateStudyTime(studentId, minutes) {
+    const stats = studentStats.find(s => s.studentId === studentId);
+    if (stats) {
+      stats.totalStudyTime += minutes;
+      stats.lastActive = new Date();
+    }
+    return stats;
+  }
+
+  static incrementMeetings(studentId) {
+    const stats = studentStats.find(s => s.studentId === studentId);
+    if (stats) {
+      stats.meetingsJoined += 1;
+    }
+    return stats;
+  }
+
+  static updateQuizStats(studentId, score) {
+    const stats = studentStats.find(s => s.studentId === studentId);
+    if (stats) {
+      stats.quizzesTaken += 1;
+      // Calculate new average
+      stats.averageQuizScore = 
+        ((stats.averageQuizScore * (stats.quizzesTaken - 1)) + score) / stats.quizzesTaken;
+    }
+    return stats;
+  }
+}
+
+module.exports = { User, Session, StudentStats };
