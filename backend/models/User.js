@@ -1,7 +1,8 @@
 // User storage
 const users = [];
 const sessions = [];
-const studentStats = []; // New: Track student statistics
+const studentStats = [];
+const hostStats = []; // New: Track host statistics
 
 class User {
   constructor(id, name, email, password, role) {
@@ -34,9 +35,11 @@ class User {
     );
     users.push(user);
     
-    // Initialize student stats if student
+    // Initialize stats based on role
     if (user.role === 'student') {
       StudentStats.create(user.id);
+    } else if (user.role === 'host') {
+      HostStats.create(user.id);
     }
     
     return user;
@@ -66,6 +69,10 @@ class User {
 
   static getAllStudents() {
     return users.filter(u => u.role === 'student');
+  }
+
+  static getAllHosts() {
+    return users.filter(u => u.role === 'host');
   }
 }
 
@@ -108,12 +115,12 @@ class StudentStats {
   static create(studentId) {
     const stats = {
       studentId,
-      totalStudyTime: 0, // in minutes
+      totalStudyTime: 0,
       meetingsJoined: 0,
       questionsAsked: 0,
       quizzesTaken: 0,
       averageQuizScore: 0,
-      focusScore: 0, // 0-100
+      focusScore: 0,
       lastActive: new Date(),
       createdAt: new Date()
     };
@@ -146,7 +153,6 @@ class StudentStats {
     const stats = studentStats.find(s => s.studentId === studentId);
     if (stats) {
       stats.quizzesTaken += 1;
-      // Calculate new average
       stats.averageQuizScore = 
         ((stats.averageQuizScore * (stats.quizzesTaken - 1)) + score) / stats.quizzesTaken;
     }
@@ -154,4 +160,64 @@ class StudentStats {
   }
 }
 
-module.exports = { User, Session, StudentStats };
+// Host Statistics
+class HostStats {
+  static create(hostId) {
+    const stats = {
+      hostId,
+      totalMeetingsCreated: 0,
+      totalParticipants: 0,
+      totalMeetingTime: 0, // in minutes
+      averageParticipantsPerMeeting: 0,
+      activeMeetings: 0,
+      lastActive: new Date(),
+      createdAt: new Date()
+    };
+    hostStats.push(stats);
+    return stats;
+  }
+
+  static findByHostId(hostId) {
+    return hostStats.find(s => s.hostId === hostId);
+  }
+
+  static incrementMeetings(hostId) {
+    const stats = hostStats.find(s => s.hostId === hostId);
+    if (stats) {
+      stats.totalMeetingsCreated += 1;
+      stats.lastActive = new Date();
+    }
+    return stats;
+  }
+
+  static addParticipants(hostId, count) {
+    const stats = hostStats.find(s => s.hostId === hostId);
+    if (stats) {
+      stats.totalParticipants += count;
+      // Recalculate average
+      if (stats.totalMeetingsCreated > 0) {
+        stats.averageParticipantsPerMeeting = 
+          stats.totalParticipants / stats.totalMeetingsCreated;
+      }
+    }
+    return stats;
+  }
+
+  static addMeetingTime(hostId, minutes) {
+    const stats = hostStats.find(s => s.hostId === hostId);
+    if (stats) {
+      stats.totalMeetingTime += minutes;
+    }
+    return stats;
+  }
+
+  static updateActiveMeetings(hostId, count) {
+    const stats = hostStats.find(s => s.hostId === hostId);
+    if (stats) {
+      stats.activeMeetings = count;
+    }
+    return stats;
+  }
+}
+
+module.exports = { User, Session, StudentStats, HostStats };
