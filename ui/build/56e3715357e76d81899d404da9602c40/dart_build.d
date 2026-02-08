@@ -1,0 +1,1 @@
+ D:\\Downloads\\ui\ and\ ux\ YallaStudy\\build\\56e3715357e76d81899d404da9602c40\\dart_build_result.json:  D:\\Downloads\\tASK5\\src\\flutter\\bin\\cache\\dart-sdk\\version D:\\Downloads\\ui\ and\ ux\ YallaStudy\\.dart_tool\\package_config.json D:\\Downloads\\ui\ and\ ux\ YallaStudy\\pubspec.yaml d:\\downloads\\ui\ and\ ux\ yallastudy\\.dart_tool\\package_config.json

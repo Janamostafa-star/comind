@@ -1,0 +1,1 @@
+ D:\\Downloads\\gemini2\\build\\801eea10a869b264761990d1a850874a\\dart_build_result.json:  D:\\Downloads\\gemini2\\pubspec.yaml D:\\Downloads\\tASK5\\src\\flutter\\bin\\cache\\dart-sdk\\version D:\\Downloads\\ui\ and\ ux\ YallaStudy\\.dart_tool\\package_config.json d:\\downloads\\ui\ and\ ux\ yallastudy\\.dart_tool\\package_config.json

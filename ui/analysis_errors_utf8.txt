@@ -1,0 +1,129 @@
+﻿Resolving dependencies...
+Downloading packages...
+  _flutterfire_internals 1.3.59 (1.3.66 available)
+  characters 1.4.0 (1.4.1 available)
+  cloud_firestore 5.6.12 (6.1.2 available)
+  cloud_firestore_platform_interface 6.6.12 (7.0.6 available)
+  cloud_firestore_web 4.4.12 (5.1.2 available)
+  cross_file 0.3.5+1 (0.3.5+2 available)
+  file_picker 8.3.7 (10.3.10 available)
+  firebase_core 3.15.2 (4.4.0 available)
+  firebase_core_web 2.24.1 (3.4.0 available)
+  firebase_storage 12.4.10 (13.0.6 available)
+  firebase_storage_platform_interface 5.2.10 (5.2.17 available)
+  firebase_storage_web 3.10.17 (3.11.2 available)
+  fl_chart 0.66.2 (1.1.1 available)
+  flutter_launcher_icons 0.13.1 (0.14.4 available)
+  flutter_lints 3.0.2 (6.0.0 available)
+  flutter_tts 3.8.5 (4.2.5 available)
+  google_fonts 6.3.3 (8.0.1 available)
+  hooks 1.0.0 (1.0.1 available)
+  image_picker_ios 0.8.13+5 (0.8.13+6 available)
+  intl 0.19.0 (0.20.2 available)
+  json_annotation 4.9.0 (4.10.0 available)
+  lints 3.0.0 (6.1.0 available)
+  matcher 0.12.17 (0.12.18 available)
+  material_color_utilities 0.11.1 (0.13.0 available)
+  meta 1.17.0 (1.18.1 available)
+  objective_c 9.2.4 (9.3.0 available)
+  source_span 1.10.1 (1.10.2 available)
+  table_calendar 3.1.3 (3.2.0 available)
+  test_api 0.7.7 (0.7.9 available)
+Got dependencies!
+29 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Analyzing ui and ux YallaStudy...                               
+
+  error - The method 'delete' isn't defined for the type 'ApiService' - lib\data\repositories\api_chat_repository.dart:43:16 - undefined_method
+warning - Unused import: 'package:flutter/foundation.dart' - lib\data\repositories\api_forest_repository.dart:1:8 - unused_import
+  error - The method 'delete' isn't defined for the type 'ApiService' - lib\data\repositories\api_meeting_repository.dart:46:16 - undefined_method
+  error - The name 'NoteModel' isn't a type, so it can't be used as a type argument - lib\data\repositories\api_note_repository.dart:11:15 - non_type_as_type_argument
+  error - Undefined name 'NoteModel' - lib\data\repositories\api_note_repository.dart:15:33 - undefined_identifier
+  error - The name 'NoteModel' isn't a type, so it can't be used as a type argument - lib\data\repositories\api_note_repository.dart:21:10 - non_type_as_type_argument
+  error - Undefined class 'NoteModel' - lib\data\repositories\api_note_repository.dart:21:32 - undefined_class
+  error - Undefined name 'NoteModel' - lib\data\repositories\api_note_repository.dart:27:12 - undefined_identifier
+  error - Undefined class 'NoteModel' - lib\data\repositories\api_note_repository.dart:31:27 - undefined_class
+  error - The method 'delete' isn't defined for the type 'ApiService' - lib\data\repositories\api_note_repository.dart:40:16 - undefined_method
+warning - Unused import: 'package:flutter/foundation.dart' - lib\data\repositories\api_session_repository.dart:1:8 - unused_import
+  error - The getter 'duration' isn't defined for the type 'ScheduledSession' - lib\data\repositories\api_session_repository.dart:16:27 - undefined_getter
+  error - The named parameter 'createdAt' is required, but there's no corresponding argument - lib\data\repositories\api_session_repository.dart:33:33 - missing_required_argument
+  error - The named parameter 'durationMinutes' is required, but there's no corresponding argument - lib\data\repositories\api_session_repository.dart:33:33 - missing_required_argument
+  error - The named parameter 'endTime' is required, but there's no corresponding argument - lib\data\repositories\api_session_repository.dart:33:33 - missing_required_argument
+  error - The named parameter 'shareableLink' is required, but there's no corresponding argument - lib\data\repositories\api_session_repository.dart:33:33 - missing_required_argument
+  error - The named parameter 'duration' isn't defined - lib\data\repositories\api_session_repository.dart:37:9 - undefined_named_parameter
+  error - The getter 'duration' isn't defined for the type 'ScheduledSession' - lib\data\repositories\api_session_repository.dart:59:59 - undefined_getter
+warning - The value of the local variable 'now' isn't used - lib\data\repositories\firestore_session_repository.dart:49:13 - unused_local_variable
+warning - The getter doesn't override an inherited getter - lib\data\repositories\in_memory_auth_repository.dart:77:26 - override_on_non_overriding_member
+warning - The getter doesn't override an inherited getter - lib\data\repositories\in_memory_auth_repository.dart:80:18 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\data\repositories\in_memory_auth_repository.dart:83:21 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\data\repositories\in_memory_auth_repository.dart:110:21 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\data\repositories\in_memory_auth_repository.dart:144:16 - override_on_non_overriding_member
+  error - The name 'NoteModel' isn't a type, so it can't be used as a type argument - lib\domain\repositories\note_repository.dart:4:15 - non_type_as_type_argument
+  error - The name 'NoteModel' isn't a type, so it can't be used as a type argument - lib\domain\repositories\note_repository.dart:5:10 - non_type_as_type_argument
+  error - Undefined class 'NoteModel' - lib\domain\repositories\note_repository.dart:5:32 - undefined_class
+  error - Undefined class 'NoteModel' - lib\domain\repositories\note_repository.dart:6:27 - undefined_class
+warning - Unused import: 'data/repositories/mock_session_repository.dart' - lib\main.dart:8:8 - unused_import
+warning - Unused import: 'package:firebase_storage/firebase_storage.dart' - lib\presentation\providers\auth_provider.dart:2:8 - unused_import
+   info - 'value' is deprecated and shouldn't be used. Use component accessors like .r or .g, or toARGB32 for an explicit conversion - lib\presentation\screens\advanced_notes_panel.dart:151:66 - deprecated_member_use
+warning - Unused import: '../../domain/models/scheduled_session_model.dart' - lib\presentation\screens\calendar_screen.dart:9:8 - unused_import
+warning - Unused import: '../../domain/models/session_model.dart' - lib\presentation\screens\calendar_screen.dart:10:8 - unused_import
+warning - Unused import: '../widgets/share_session_sheet.dart' - lib\presentation\screens\calendar_screen.dart:14:8 - unused_import
+warning - Unused import: '../../presentation/providers/auth_provider.dart' - lib\presentation\screens\calendar_screen.dart:15:8 - unused_import
+warning - The value of the field '_isLoading' isn't used - lib\presentation\screens\calendar_screen.dart:29:8 - unused_field
+warning - The value of the local variable 'theme' isn't used - lib\presentation\screens\calendar_screen.dart:50:11 - unused_local_variable
+  error - The method 'addChat' isn't defined for the type 'AppState' - lib\presentation\screens\dashboard_tabs\chat_tab.dart:132:42 - undefined_method
+warning - The declaration '_getGreetingIcon' isn't referenced - lib\presentation\screens\dashboard_tabs\home_tab.dart:375:12 - unused_element
+warning - The declaration '_buildRecentNoteCard' isn't referenced - lib\presentation\screens\dashboard_tabs\home_tab.dart:393:10 - unused_element
+warning - The declaration '_buildEmptyState' isn't referenced - lib\presentation\screens\dashboard_tabs\home_tab.dart:699:10 - unused_element
+warning - The value of the local variable 'statusIcon' isn't used - lib\presentation\screens\dashboard_tabs\home_tab.dart:791:14 - unused_local_variable
+   info - 'Share' is deprecated and shouldn't be used. Use SharePlus instead - lib\presentation\screens\dashboard_tabs\home_tab.dart:930:25 - deprecated_member_use
+   info - 'share' is deprecated and shouldn't be used. Use SharePlus.instance.share() instead - lib\presentation\screens\dashboard_tabs\home_tab.dart:930:31 - deprecated_member_use
+  error - The method 'addMeeting' isn't defined for the type 'AppState' - lib\presentation\screens\dashboard_tabs\meetings_tab.dart:213:42 - undefined_method
+  error - The method 'deleteMeeting' isn't defined for the type 'AppState' - lib\presentation\screens\dashboard_tabs\meetings_tab.dart:307:44 - undefined_method
+warning - The declaration '_ActionButton' isn't referenced - lib\presentation\screens\dashboard_tabs\meetings_tab.dart:329:7 - unused_element
+   info - 'value' is deprecated and shouldn't be used. Use component accessors like .r or .g, or toARGB32 for an explicit conversion - lib\presentation\screens\edit_profile_screen.dart:64:98 - deprecated_member_use
+warning - The value of the field '_cameraZoom' isn't used - lib\presentation\screens\gamification\enhanced_forest_screen.dart:24:10 - unused_field
+warning - The value of the field '_cameraOffset' isn't used - lib\presentation\screens\gamification\enhanced_forest_screen.dart:25:10 - unused_field
+warning - The declaration '_buildTerrainBackground' isn't referenced - lib\presentation\screens\gamification\enhanced_forest_screen.dart:641:10 - unused_element
+warning - The declaration '_buildAnimatedTree' isn't referenced - lib\presentation\screens\gamification\enhanced_forest_screen.dart:680:10 - unused_element
+warning - The declaration '_buildPlantableSlot' isn't referenced - lib\presentation\screens\gamification\enhanced_forest_screen.dart:732:10 - unused_element
+warning - The declaration '_buildBottomPanel' isn't referenced - lib\presentation\screens\gamification\enhanced_forest_screen.dart:899:10 - unused_element
+warning - The declaration '_PerspectiveGridPainter' isn't referenced - lib\presentation\screens\gamification\enhanced_forest_screen.dart:1158:7 - unused_element
+warning - Unused import: 'dart:math' - lib\presentation\screens\google_meet_style_meeting.dart:6:8 - unused_import
+warning - Unused import: '../../widgets/glassmorphism_card.dart' - lib\presentation\screens\google_meet_style_meeting.dart:13:8 - unused_import
+warning - Unused import: 'dashboard_screen.dart' - lib\presentation\screens\google_meet_style_meeting.dart:16:8 - unused_import
+warning - The value of the field '_gridRows' isn't used - lib\presentation\screens\google_meet_style_meeting.dart:53:7 - unused_field
+warning - The declaration '_toggleMic' isn't referenced - lib\presentation\screens\google_meet_style_meeting.dart:177:8 - unused_element
+warning - The declaration '_toggleCam' isn't referenced - lib\presentation\screens\google_meet_style_meeting.dart:184:8 - unused_element
+warning - The declaration '_toggleRecording' isn't referenced - lib\presentation\screens\google_meet_style_meeting.dart:197:8 - unused_element
+warning - The declaration '_buildBottomControls' isn't referenced - lib\presentation\screens\google_meet_style_meeting.dart:1007:10 - unused_element
+warning - The value of the field '_isRecording' isn't used - lib\presentation\screens\live_meeting_screen.dart:36:8 - unused_field
+warning - The value of the field '_bulletPoints' isn't used - lib\presentation\screens\live_meeting_screen.dart:42:22 - unused_field
+warning - The value of the field '_isAiGeneratingSummary' isn't used - lib\presentation\screens\live_meeting_screen.dart:43:8 - unused_field
+warning - The value of the field '_noteColors' isn't used - lib\presentation\screens\live_meeting_screen.dart:47:19 - unused_field
+warning - The declaration '_endSession' isn't referenced - lib\presentation\screens\live_meeting_screen.dart:86:8 - unused_element
+warning - The declaration '_participantTile' isn't referenced - lib\presentation\screens\live_meeting_screen.dart:488:10 - unused_element
+warning - The declaration '_formatDuration' isn't referenced - lib\presentation\screens\live_meeting_screen.dart:527:10 - unused_element
+   info - The import of 'package:flutter/services.dart' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart' - lib\presentation\screens\note_detail_screen.dart:2:8 - unnecessary_import
+   info - 'value' is deprecated and shouldn't be used. Use component accessors like .r or .g, or toARGB32 for an explicit conversion - lib\presentation\screens\note_detail_screen.dart:172:29 - deprecated_member_use
+   info - 'value' is deprecated and shouldn't be used. Use component accessors like .r or .g, or toARGB32 for an explicit conversion - lib\presentation\screens\note_detail_screen.dart:177:67 - deprecated_member_use
+   info - 'Share' is deprecated and shouldn't be used. Use SharePlus instead - lib\presentation\screens\note_detail_screen.dart:241:15 - deprecated_member_use
+   info - 'share' is deprecated and shouldn't be used. Use SharePlus.instance.share() instead - lib\presentation\screens\note_detail_screen.dart:241:21 - deprecated_member_use
+warning - The value of the field '_sortOption' isn't used - lib\presentation\screens\notes_summary_screen.dart:20:10 - unused_field
+warning - The declaration '_formatDate' isn't referenced - lib\presentation\screens\notes_summary_screen.dart:24:10 - unused_element
+   info - 'Share' is deprecated and shouldn't be used. Use SharePlus instead - lib\presentation\screens\notes_summary_screen.dart:324:30 - deprecated_member_use
+   info - 'share' is deprecated and shouldn't be used. Use SharePlus.instance.share() instead - lib\presentation\screens\notes_summary_screen.dart:324:36 - deprecated_member_use
+  error - The method 'addMeeting' isn't defined for the type 'AppState' - lib\presentation\screens\schedule_session_screen.dart:176:32 - undefined_method
+warning - The value of the local variable 'visualState' isn't used - lib\presentation\screens\settings_screen.dart:23:11 - unused_local_variable
+   info - 'Share' is deprecated and shouldn't be used. Use SharePlus instead - lib\presentation\widgets\share_session_sheet.dart:121:11 - deprecated_member_use
+   info - 'share' is deprecated and shouldn't be used. Use SharePlus.instance.share() instead - lib\presentation\widgets\share_session_sheet.dart:121:17 - deprecated_member_use
+warning - Unused import: 'package:shared_preferences/shared_preferences.dart' - lib\providers\app_state.dart:2:8 - unused_import
+warning - Unused import: 'dart:convert' - lib\providers\app_state.dart:4:8 - unused_import
+warning - The declaration '_handleAiResponseToVoice' isn't referenced - lib\providers\app_state.dart:191:16 - unused_element
+warning - The declaration '_buildAdvancedWaveform' isn't referenced - lib\widgets\ai_avatar_widget.dart:138:10 - unused_element
+warning - Dead code - lib\widgets\meeting_controls.dart:156:51 - dead_code
+warning - Dead code - lib\widgets\meeting_controls.dart:157:52 - dead_code
+warning - Dead code - lib\widgets\meeting_controls.dart:160:56 - dead_code
+warning - Dead code - lib\widgets\meeting_controls.dart:165:65 - dead_code
+warning - Dead code - lib\widgets\meeting_controls.dart:166:68 - dead_code
+
